@@ -23,10 +23,29 @@
 .main-banner__item {
     position: relative;
 }
+.main-banner__content-text{
+    font-weight: 900px;
+    font-size: 26px;
+}
+.main-banner__content-price{
+    font-weight: 900px;
+    font-size: 48px;
+    color: #3EC6E0
+}
+.main-banner__content-price-cents{
+    font-weight: 900px;
+    font-size: 28px;
+    color: #3EC6E0
+}
+.main-banner__content-description{
+    font-weight: 400px;
+    font-size: 12px;
+}
 
 section.main-banner__controller {
     display: flex;
     align-items: stretch;
+    margin-top: -5px;
 }
 
 .main-banner__controller-title {
@@ -51,4 +70,34 @@ section.main-banner__controller {
 .main-banner__arrows {
     display: flex;
     gap: 1rem;
+}
+
+section.banners-container {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.banners-container__content {
+    background: #3EC6E0;
+    margin-top: -5px;
+    display: block;
+    z-index: 10;
+    padding: .75rem;
+    border-left: 10px solid;
+    color: #084154;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+}
+
+.banners-container__content hr{
+flex-grow: 1;
+margin-left: 10px;
+color: #084154;
+height: 1px;
+border-width: 0;
+background-color: #084154;
 }
