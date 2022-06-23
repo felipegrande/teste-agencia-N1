@@ -87,9 +87,7 @@ function closeMenuHeader(){
 
 
 function addItemBag(elem){
-    console.log('click', elem)
     var addItem = itemsBuy++;
-    console.log("clicado",itemsBuy, addItem);
     removeClass(modalBuySuccess, "none" );
     removeClass(buySucess, "none")
     addClass(listContact, "none")
