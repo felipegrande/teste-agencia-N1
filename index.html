@@ -7,46 +7,129 @@
 
     <title> N1 Rush </title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+
 
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/style.css">
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	
+
 </head>
 
-<body>
-    <header class="header">
-        <div class="header__item">
-            <img src="./assets/icons/icon_hamburguer.svg">
-        </div>
-        <div class="header__item header__item-logo">
-            <img src="./assets/icons/logo.svg">
-        </div>
-        <div class="header__item" >
-            <img src="./assets/icons/paper-plane.svg">
-        </div>
-        <div class="header__item">
-            <img src="./assets/icons/search-solid.svg">
-        </div>
-        <div class="header__item">
-            <img src="./assets/icons/shopping-bag-solid.svg">
-        </div>
+<body> 
+    <header >
+        <section class="header" id="header">
+            <div  onclick="openMenuhamburguer()" class="header__item header__item-hamburguer" id="hamburguer">
+                <img src="./assets/icons/icon_hamburguer.svg">
+            </div>
+            <div class="header__close none" id="closeMenu">
+                <p>X</p>
+            </div>
+
+            <div class="header__item header__item-logo">
+                <img src="./assets/icons/logo.svg">
+               
+            </div>
+            <div class="header__item" id="contact" >
+                <img src="./assets/icons/paper-plane.svg">
+                <p class="header__item-p">CONTATO</p>
+            </div>
+            <div class="header__item">
+                <img src="./assets/icons/search-solid.svg">
+                <p class="header__item-p">BUSCA</p>
+            </div>
+            <div class="header__item-border">a</div>
+            <div class="header__item header__item-bag ">
+                <img src="./assets/icons/shopping-bag-solid.svg">
+                <p class="header__item-purchase " id="purchase">0</p>
+            </div>
+        </section>
+        <section class="menu-hamburguer_container none" id="menu">
+            <div class="menu-hamburguer_pointer"> <img src="./assets/icons/Rectangle.svg"></div>
+            <div class="menu-hamburguer ">
+                <div class="menu-hamburguer__item">
+                    <h3 class="menu-hamburguer__title">luta</h3>
+                    <ol class="menu-hamburguer__games">
+                        <li>Mortal Kombat</li>
+                        <li>Smash Bros</li>
+                        <li>Killer Instict</li>
+                        <li>DBZ Kakarot</li>
+                    </ol>
+                </div>
+                <hr>
+                <div class="menu-hamburguer__item">
+                    <h3 class="menu-hamburguer__title">Ação  / Aventura</h3>
+                    <ol class="menu-hamburguer__games">
+                            <li>GTA V</li>
+                            <li>Tomb Raider</li>
+                            <li>HALO</li>
+                            <li>Call of Duty</li>
+                        </ol>
+                    </div>
+                    <hr>
+                    <div class="menu-hamburguer__item">
+                        <h3 class="menu-hamburguer__title">Corrida</h3>
+                        <ol class="menu-hamburguer__games">
+                            <li>NEED For SPEED</li>
+                            <li>Forza Horizon</li>                    
+                        </ol>
+                    </div>
+    
+    
+    
+    
+                </div>
+            
+            </section>
+       
+   
+        
     </header>
+    
     <main>
        <section class="main-banner">
             <section class="main-banner__items">
                 <div class="main-banner__item">
-                    <img src="./assets/img/principal_banner_mobile.jpg" width="100%" alt="banner do jogo Mortal Kombat">
+                    
+                    <img class="main-banner__img"  src="./assets/img/principal_banner_mobile.jpg" width="100%" alt="banner do jogo Mortal Kombat">
+                    <img  class="main-banner__img-desktop" src="./assets/img/principal_banner_desktop.jpg" width="100%" alt="banner do jogo Mortal Kombat">
                     <div  class="main-banner__content">
-                        <p class="main-banner__content-text">MORTAL KOMBAT</p>
-                        <p class="main-banner__content-price">R$ 299,99</p>
+                        <p class="main-banner__content-text">Mortal Kombat</p>
+                        <p class="main-banner__content-price">R$ 299<span class="main-banner__content-price-cents">,99</span></p>
                         <p class="main-banner__content-description">Mortal Kombat X combina uma apresentação cinemática única com uma jogabilidade totalmente nova. Os jogadores podem escolher pela primeira vez diversas variantes de cada personagem, afetando tanto a estratégia como o estilo de luta.</p>
+                     </div>
+                </div>
+                <div class="main-banner__item">
+                    
+                    <img class="main-banner__img"  src="./assets/img/principal_banner_mobile_02.jpg" width="100%" alt="banner do jogo Mortal Kombat">
+                    <img  class="main-banner__img-desktop" src="./assets/img/principal_banner_desktop_02.jpg" width="100%" alt="banner do jogo Mortal Kombat">
+                    <div  class="main-banner__content">
+                        <p class="main-banner__content-text">Red Dead Redemption II</p>
+                        <p class="main-banner__content-price">R$ 129<span class="main-banner__content-price-cents">,99</span></p>
+                        <p class="main-banner__content-description">Estados Unidos, 1899. O fim da era do velho oeste começou, e as autoridades estão caçando as últimas gangues de fora da lei que restam.</p>
                      </div>
                 </div>
             </section>
             <section class="main-banner__controller">
-                <div class="main-banner__controller-title">Mortal Kombat</div>
+                <div>
+                    <div class="main-banner__controller-title"></div>
+            
+                </div>
+               
                 <div class="main-banner__controller-arrowSection">
-                    <div class="main-banner__pagination">1/2</div>
+                    <div class="main-banner__pagination"></div>
                     <div class="main-banner__arrows">
                         <span class="main-banner__arrows--down">
                             <img src="./assets/icons/angle-left-solid.svg" alt="">
@@ -60,7 +143,7 @@
        </section> 
        <section class="banners-container">
             <div class="banners-container__banner">
-                <img src="./assets/img/zelda_banner.jpg" width="100%" alt="banner do jogo Sekiro"/>
+                <img src="./assets/img/zelda_banner.jpg" width="100%"   alt="banner do jogo Sekiro"/>
                 <div class="banners-container__content">
                     <span class="banners-container__banner-title">The Legend of Zelda - Breath of the wild</span><hr />
                 </div>
@@ -74,13 +157,133 @@
             </div>
 
        </section>
-    </main>
-    <footer>
-        <div class="logo-footer">
-            <img src="./assets/img/logo_n1.svg"/>
+       <section class="showcase__container" >
+
+        <div class="showcase__top">
+            <img src="./assets/icons/prod-desaq-icon.svg">
+            <h2 class="showcase__top-title">Produtos em destaque</h2>
         </div>
-        <span>Agência N1 - Todos os direitos reservados</span>
+        <div class="showcase__body">
+            <div class="showcase">
+                
+                <div class="showcase-products">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="./assets/img/product-outriders.svg" alt="Imagem do produto Outriders">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-content-itens" >
+                                <span class="card-title">Outriders</span>
+                                <span class="card-price">R$ 200,00</span>
+                            </div>
+                            <div>
+                               <div class="noneMario" id="marioButton">
+                                    <img src="./assets/icons/mario-button.svg">
+                                </div>
+                                <button class="card-content-button" id="buy" onclick="addItemBag(this)">COMPRAR</button>
+                                <div class="noneMario" id="marioButton">
+                                    <img src="./assets/icons/mario-button.svg">
+                                </div>
+                            </div>
+                            
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-products">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="./assets/img/product-cyberpunk2077.svg"  alt="Imagem do produto Cyberpunk2077">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-content-itens" >
+                                <span class="card-title">CYBERPUNK 2077</span>
+                                <span class="card-price">R$ 200,00</span>
+                            </div> 
+                            <div >
+                                
+                                <button class="card-content-button" id="buy" onclick="addItemBag(this)">COMPRAR</button>
+                                <div class="noneMario" id="marioButton">
+                                    <img src="./assets/icons/mario-button.svg">
+                                </div>
+                            </div>
+                            
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-products">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="./assets/img/product-donkey-kong.svg" alt="Imagem do produto Donkey Kong">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-content-itens" >
+                                <span class="card-title">Donkey Kong Country Tropical Freeze</span>
+                                <span class="card-price">R$ 200,00</span>
+                            </div>
+                            <div>
+                                
+                            
+                                <button class="card-content-button" id="buy" onclick="addItemBag(this)">COMPRAR</button>
+                                <div class="noneMario" id="marioButton">
+                                    <img src="./assets/icons/mario-button.svg">
+                                </div>
+                            </div>
+                            
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+           
+            
+       </section>
+       <section class="modal-container none" id="success">
+                   
+            <div class="modal-content">
+                <div class="modal-buySuccess__close">
+                    <img src="./assets/icons/close_btn.svg" id="close" class="modal-buySuccess__close-text">
+                </div>
+                <div class="modal-content__buySucess" id="buySucess">
+                    <div class="modal-content__buySucess-title" >
+                        <hr>
+                            <p class="modal-buySuccess__content-text">Pedido realizado<br>com sucesso!</p>
+                        <hr>
+                    </div>
+                    <div class="modal-buySuccess__image">
+                        <img src="./assets/img/mario.svg">
+                    </div>
+                </div>
+                <div class="none" id="listContact">
+                    <h2 class="contact-title">Contato</h2>
+                    <p class="contact-text">Entre em contato conosco pelos canais:</p>
+                    <p class="contact-text">e-mail:  felipegrande3@gmail.com</p>
+                    <p class="contact-text">whatssap: (11)94908-8037</p>
+                    <div class="contact-img">
+                        <img  src="./assets/icons/mario-button.svg" >
+                    </div>
+                   
+
+                </div>
+            </div>
+
+       </section>
+    </main>
+
+    <footer>
+        <div class="footer__container"> 
+            <div class="logo-footer">
+                <img src="./assets/img/logo_n1.svg"/>
+            </div>
+            <span>Agência N1 - Todos os direitos reservados</span>
+
+        </div>
     </footer>
+
+    <script src="./js/script.js"></script>
 
 </body>
 
